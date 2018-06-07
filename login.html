@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+ <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="images/menu/gts.ico">
+
+	<script type="text/javascript" src="scripts/validar_usuario.js"></script>
+	<script type="text/javascript" src="scripts/Cookie_swci.js"></script>
+
+	<script defer src="scripts/fontawesome-all.js"></script>
+    <title>GTS Pilar</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/offcanvas.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+ 
+     <!-- turnose CSS este tiene que cargarse ultimo-->
+    <link href="css/gts_turnos.css" rel="stylesheet">
+    <!-- Alertas -->
+	<link href="build/css/alertify.css" rel="stylesheet">
+	<link href="build/css/themes/bootstrap.css" rel="stylesheet">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link href="build/toastr.min.css" rel="stylesheet" type="text/css" /> -->
+	 </head>
+  <body class="bg-light fondo">
+
+    <nav class="navbar navbar-expand-lg fixed-top" style="background:#FFC400">
+      <a class="navbar-brand mr-auto mr-lg-0" href="#">GTS - Pilar</a>
+    </nav>
+
+    <main role="main" class="container">
+    <!-- Esta parte se cambia de acuerdo a cada pantalla -->
+	<div id="principal">
+    	<!-- ################################################### -->
+
+		<div class="d-flex p-3 my-3 box-shadow" > <!-- style="background-color:#FFF" -->
+			<div class="container">
+            	<div class="h1 text-center text-danger">Login</div>
+                <div class="row text-center my-3">
+                	<div class="col-12">
+                    	<input type="text" class="form-control" name="usuario" id="usuario"  placeholder="D.N.I. / C.U.I.T." required>
+					</div>
+				</div>
+				<div class="row text-center my-3">
+                	<div class="col-12 col-lg-12">
+					<input type="password" class="form-control" name="password" id="password" placeholder="Password" required>
+					</div>
+				</div>
+  
+				<div class="row text-center my-3">
+                	<div class="col-12 col-lg-12">
+					    <input type="checkbox" class="form-check-input" id="conectado" name="conectado">
+					    <label class="form-check-label text-primary" for="exampleCheck1">Mantenerme conectado</label>
+					</div>
+				</div>
+
+               					<div class="row text-center my-3">
+                	<div class="col-12">
+                		<button type="submit" class="btn btn-block btn-success" onClick="validar_usuario()">Login</button>
+                	</div>
+                	<div class="col-12">
+						<a href="">No posee cuenta&#63; Registrese</a>
+					</div>
+					<div class="col-12">
+						<a href="">Recuperar contrase&ntilde;a</a>
+					</div>
+				</div>
+           
+			</div>
+		</div> <!--  /d-flex -->
+
+	
+	</div> <!-- /principal
+    </main>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+	<script src="build/jquery.min.js"></script>
+    <script src="bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="js/holder.min.js"></script>
+    <!-- <script src="js/offcanvas.js"></script> -->
+	
+	<script src="js/bootbox.min.js"></script>
+	<!-- <script src="build/toastr.min.js"></script> -->
+	</main>
+  </body>
+</html>
+

@@ -1,0 +1,67 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,700);
+/* CSS Document */
+.size_calendar{
+  width: 1500px;
+}
+.size_barra{
+  width: 500px;
+}
+
+.btn-xl {
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+BtnCalendario {
+  font-size: 20px;
+  line-height: 50px;
+  text-align: center;
+  width: 100px;
+  height: 50px;
+}
+
+.circle {
+ /* height: 40px;
+  width: 40px;*/
+  display: table-cell;
+  text-align: center;
+  vertical-align: center;
+  border-radius: 100%;
+  background: #FF0000;
+}
+
+.error .modal-header{
+	background:red;
+}
+
+.successes .modal-header{
+	background:green;
+}
+
+.center-hora {
+    display: flex;
+    align-items: center;
+}
+
+.fondo{
+   background: url("../images/fondo.jpg") no-repeat fixed center;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+   height: 100%;
+   width: 100% ;
+   text-align: center;
+ 
+}
+
+.text-white{
+	color: white;
+}
+
+.no_select {
+	opacity: 0.5;
+    filter: alpha(opacity=30);
+}
