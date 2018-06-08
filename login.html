@@ -8,7 +8,8 @@
     <link rel="icon" href="images/menu/gts.ico">
 
 	<script type="text/javascript" src="scripts/validar_usuario.js"></script>
-	<script type="text/javascript" src="scripts/Cookie_swci.js"></script>
+	<script type="text/javascript" src="scripts/leerDocumento.js"></script>
+	<script type="text/javascript" src="scripts/templates.js"></script>
 
 	<script defer src="scripts/fontawesome-all.js"></script>
     <title>GTS Pilar</title>
@@ -29,11 +30,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <link href="build/toastr.min.css" rel="stylesheet" type="text/css" /> -->
 	 </head>
-  <body class="bg-light fondo">
+  <body onLoad="leerDocumento()" class="bg-light fondo">
 
-    <nav class="navbar navbar-expand-lg fixed-top" style="background:#FFC400">
-      <a class="navbar-brand mr-auto mr-lg-0" href="#">GTS - Pilar</a>
-    </nav>
+   <!-- Encabezado -->
+    <div class="row">
+		<script src="scripts/encabezado.js"></script>
+    </div>
+	<!-- Fin encabezado -->
 
     <main role="main" class="container">
     <!-- Esta parte se cambia de acuerdo a cada pantalla -->
@@ -41,7 +44,7 @@
     	<!-- ################################################### -->
 
 		<div class="d-flex p-3 my-3 box-shadow" > <!-- style="background-color:#FFF" -->
-			<div class="container">
+			<div class="container" style="background-color:#ffc40075">
             	<div class="h1 text-center text-danger">Login</div>
                 <div class="row text-center my-3">
                 	<div class="col-12">
@@ -61,7 +64,7 @@
 					</div>
 				</div>
 
-               					<div class="row text-center my-3">
+				<div class="row text-center my-3">
                 	<div class="col-12">
                 		<button type="submit" class="btn btn-block btn-success" onClick="validar_usuario()">Login</button>
                 	</div>

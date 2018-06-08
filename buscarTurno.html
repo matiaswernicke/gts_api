@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+ <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="images/menu/gts.ico">
+
+	<script type="text/javascript" src="scripts/templates.js"></script>
+	<script type="text/javascript" src="scripts/entroBuscarTurno.js"></script>
+
+	<script defer src="scripts/fontawesome-all.js"></script>
+    <title>GTS Pilar</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/offcanvas.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+ 
+     <!-- turnose CSS este tiene que cargarse ultimo-->
+    <link href="css/gts_turnos.css" rel="stylesheet">
+    <!-- Alertas -->
+	<link href="build/css/alertify.css" rel="stylesheet">
+	<link href="build/css/themes/bootstrap.css" rel="stylesheet">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link href="build/toastr.min.css" rel="stylesheet" type="text/css" /> -->
+	 </head>
+  <body onLoad="entroBuscarTurno()" class="bg-light fondo">
+
+   <!-- Encabezado -->
+    <div class="row">
+		<script src="scripts/encabezado.js"></script>
+    </div>
+	<!-- Fin encabezado -->
+
+    <main role="main" class="container">
+    <!-- Esta parte se cambia de acuerdo a cada pantalla -->
+	<div id="principal">
+    	<!-- ################################################### -->
+
+		<div class="d-flex p-3 my-3 box-shadow" > <!-- style="background-color:#ffc40075" -->
+			<div class="container" style="background-color:#F3F1F1">
+            	<div class="h5 text-center text-danger">Selecione el horario</div>
+                <div class="row text-center my-3">
+                	<div class="col-6" onClick="seleccionar()">
+                   		<button class="btn btn-outline-success my-6 my-sm-6" data-toggle="modal" onClick="turnos_abrir(0800)"  >08:00</button>
+                    </div>
+                	<div class="col-6" onClick="seleccionar()">
+                   		<button class="btn btn-outline-success my-6 my-sm-6" data-toggle="modal" onClick="turnos_abrir(0800)"  >08:30</button>
+                    </div>
+                	<div class="col-6" onClick="seleccionar()">
+                   		<button class="btn btn-outline-success my-6 my-sm-6" data-toggle="modal" onClick="turnos_abrir(0800)"  >09:00</button>
+                    </div>
+                	<div class="col-6" onClick="seleccionar()">
+                   		<button class="btn btn-outline-success my-6 my-sm-6" data-toggle="modal" onClick="turnos_abrir(0800)"  >09:30</button>
+                    </div>
+                	<div class="col-6" onClick="seleccionar()">
+                   		<button class="btn btn-outline-success my-6 my-sm-6" data-toggle="modal" onClick="turnos_abrir(0800)"  >10:00</button>
+                    </div>
+                	<div class="col-6" onClick="seleccionar()">
+                   		<button class="btn btn-outline-success my-6 my-sm-6" data-toggle="modal" onClick="turnos_abrir(0800)"  >10:30</button>
+                    </div>
+                	<div class="col-6" onClick="seleccionar()">
+                   		<button class="btn btn-outline-danger my-6 my-sm-6" data-toggle="modal" onClick="turnos_abrir(0800)"  >11:00</button>
+                    </div>
+                	<div class="col-6" onClick="seleccionar()">
+                   		<button class="btn btn-outline-success my-6 my-sm-6" data-toggle="modal" onClick="turnos_abrir(0800)"   >11:30</button>
+                    </div>
+                	<div class="col-6" onClick="seleccionar()">
+                   		<button class="btn btn-outline-success my-6 my-sm-6" data-toggle="modal" onClick="turnos_abrir(0800)"  >12:00</button>
+                    </div>
+                	<div class="col-6" onClick="seleccionar()">
+                   		<button class="btn btn-outline-success my-6 my-sm-6" data-toggle="modal" onClick="turnos_abrir(0800)"  >12:30</button>
+                    </div>
+                	<div class="col-6" onClick="seleccionar()">
+                   		<button class="btn btn-outline-success my-6 my-sm-6" data-toggle="modal" onClick="turnos_abrir(0800)"  >13:00</button>
+                    </div>
+                	<div class="col-6" onClick="seleccionar()">
+                   		<button class="btn btn-outline-success my-6 my-sm-6" data-toggle="modal" onClick="turnos_abrir(0800)"  >13:30</button>
+                    </div>
+                	<div class="col-6" onClick="seleccionar()">
+                   		<button class="btn btn-outline-success my-6 my-sm-6" data-toggle="modal" onClick="turnos_abrir(0800)"  >14:00</button>
+                    </div>
+                	<div class="col-6" onClick="seleccionar()">
+                   		<button class="btn btn-outline-success my-6 my-sm-6" data-toggle="modal" onClick="turnos_abrir(0800)"  >14:30</button>
+                    </div>
+                	<div class="col-6" onClick="seleccionar()">
+                   		<button class="btn btn-outline-success my-6 my-sm-6" data-toggle="modal" onClick="turnos_abrir(0800)"  >15:00</button>
+                    </div>
+                	<div class="col-6" onClick="seleccionar()">
+                   		<button class="btn btn-outline-success my-6 my-sm-6" data-toggle="modal" onClick="turnos_abrir(0800)"  >15:30</button>
+                    </div>
+                	<div class="col-6" onClick="seleccionar()">
+                   		<button class="btn btn-outline-success my-6 my-sm-6" data-toggle="modal" onClick="turnos_abrir(0800)"  >16:00</button>
+                    </div>
+                	<div class="col-6" onClick="seleccionar()">
+                   		<button class="btn btn-outline-success my-6 my-sm-6" data-toggle="modal" onClick="turnos_abrir(0800)"  >16:30</button>
+                    </div>
+                	<div class="col-6" onClick="seleccionar()">
+                   		<button class="btn btn-outline-success my-6 my-sm-6" data-toggle="modal" onClick="turnos_abrir(0800)" >17:00</button>
+                    </div>
+                	<div class="col-6" onClick="seleccionar()">
+                   		<button class="btn btn-outline-danger my-6 my-sm-6" data-toggle="modal" onClick="turnos_abrir(0800)" disabled >17:30</button>
+                    </div>
+				</div>
+						
+				<div class="row text-center my-3">
+                	<div class="col-12 col-lg-12">
+						<button type="submit" class="btn btn-block btn-success" onClick="">Reservar</button>
+					</div>
+				</div>
+
+				<div class="row text-center my-3">
+                	<div class="col-12 col-lg-12">
+						<button type="submit" class="btn btn-block btn-success" onClick="location.href='menu.html';">Volver</button>
+					</div>
+				</div>
+                   
+
+						</div>
+		</div> <!--  /d-flex -->
+
+	
+	</div> <!-- /principal
+    </main>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+	<script src="build/jquery.min.js"></script>
+    <script src="bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="js/holder.min.js"></script>
+    <!-- <script src="js/offcanvas.js"></script> -->
+	
+	<script src="js/bootbox.min.js"></script>
+	<!-- <script src="build/toastr.min.js"></script> -->
+	</main>
+  </body>
+</html>
+

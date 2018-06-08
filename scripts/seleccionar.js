@@ -1,5 +1,6 @@
-
 function seleccionar(tipo){
+	setCookie('turno_tipo', tipo, 1000);
+	console.log('Tipo turno = '+tipo);
 	if(tipo === 1){document.getElementById("gomeria").className = "img-responsive";}
 					else
 				  {document.getElementById("gomeria").className = "img-responsive no_select";}
