@@ -1,18 +1,18 @@
-<?xml version='1.0' encoding='utf-8' ?>
+﻿<?xml version='1.0' encoding='utf-8' ?>
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.gtsTurnos"
+        id        = "com.VacVis"
         android-versionCode="22"
         version   = "1.0.6">
 
-    <name>Turnos</name>
+    <name>Visitas medicas</name>
 
     <description>
-        Turnos para taller mecanico
+        Visitas medicas, herramienta de consulta y control para Visitas medicas.
     </description>
 
-    <author href="http://www.swci.com.ar" email="info@swci.com.ar">
-        SWCI
+    <author href="http://www.vacunar.com.ar" email="info@vacunar.com.ar">
+        Vacunar
     </author>
 	<preference name="permissions"                value="none"/>
 
