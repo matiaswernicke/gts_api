@@ -1,11 +1,16 @@
 
 function entroPedirTurno(){
-	console.log('Leer entroBuscarTurno');
+	console.log('Leer entroPedirTurno');
 	setCookie('turno_tipo', 0, 1000);
 	setCookie('turno_vehiculo', 0, 1000);
+	setCookie('hora', 0, 1000);
 	
 	var date = new Date();
-
+	
+	var dia = date.getDay()
+	//console.log('El dia es '+dia)
+	if (dia == 0){date.setDate(date.getDate() + 1);}
+	//console.log('La fecha es '+date)
 	var day = date.getDate();
 	var month = date.getMonth() + 1;
 	var year = date.getFullYear();

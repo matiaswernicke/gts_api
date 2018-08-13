@@ -7,7 +7,22 @@
     <meta name="author" content="">
     <link rel="icon" href="images/menu/gts.ico">
 
-	<script type="text/javascript" src="scripts/seleccionar.js"></script>
+	<!-- Poner en todos -->
+	<script type="text/javascript" src="scripts/validar_usuario.js"></script>
+	<script type="text/javascript" src="scripts/leerDocumento.js"></script>
+    <script type="text/javascript" src="scripts/Cookie_swci.js"></script>
+	<script type="text/javascript" src="scripts/salir.js"></script>
+	<script src="js/bootbox.min.js"></script>
+	<!-------------------------------->
+
+	<script type="text/javascript" src="scripts/entroMisTurnos.js"></script>
+	<script type="text/javascript" src="scripts/entroMisTurnosPantalla.js"></script>
+	<script type="text/javascript" src="scripts/verTurno.js"></script>
+	<script type="text/javascript" src="scripts/anular_turno.js"></script>
+	<script type="text/javascript" src="scripts/masUno.js"></script>
+	<script type="text/javascript" src="scripts/menosUno.js"></script>
+	<script type="text/javascript" src="scripts/descargar_pdf.js"></script>
+	<script type="text/javascript" src="scripts/descargar_qr.js"></script>
 
 	<script defer src="scripts/fontawesome-all.js"></script>
     <title>GTS Pilar</title>
@@ -28,58 +43,37 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <link href="build/toastr.min.css" rel="stylesheet" type="text/css" /> -->
 	 </head>
-  <body class="bg-light fondo">
+  <body onLoad="entroMisTurnos()" class="bg-light fondo">
 
-    <nav class="navbar navbar-expand-lg fixed-top" style="background:#FFC400">
-      <a class="navbar-brand mr-auto mr-lg-0" href="#">GTS - Pilar</a>
-    </nav>
+   <!-- Encabezado -->
+    <div class="row">
+		<script src="scripts/encabezado.js"></script>
+    </div>
+	<!-- Fin encabezado -->
 
     <main role="main" class="container">
     <!-- Esta parte se cambia de acuerdo a cada pantalla -->
 	<div id="principal">
     	<!-- ################################################### -->
 
-		<div class="d-flex p-3 my-3 box-shadow" > <!-- style="background-color:#FFF" -->
-			<div class="container">
-            	<div class="h3 text-center text-danger">Selecione el servicio y la fecha</div>
-                <div class="row text-center my-3">
-                	<div class="col-6" onClick="seleccionar(1)">
-                    	<img title="Gomeria" id="gomeria" class="img-responsive no_select" src="images/menu/cuadro_gomeria.png">
-					</div>
-                	<div class="col-6" onClick="seleccionar(2)">
-						<img id="lavado" class="img-responsive no_select" src="images/menu/cuadro_lavado.png">
-					</div>
-				</div>
-                <div class="row text-center my-3">
-                	<div class="col-6" onClick="seleccionar(3)">
-                    	<img id="lubricentro" class="img-responsive no_select" src="images/menu/cuadro_lubricentro.png">
-					</div>
-                	<div class="col-6" onClick="seleccionar(4)">
-						<img id="servicio" class="img-responsive no_select" src="images/menu/cuadro_servicio.png">
-					</div>
-				</div>
-
-				<div class="panel panel-default">
-					<div class="col-12" align="center" style="size:30">
-						<input type="date" size="10" id="fecha" class="form-control" placeholder="Fecha">
-					</div>
-				</div>
-
-						
+		<div class="d-flex p-3 my-3 box-shadow" > <!-- style="background-color:#ffc40075" -->
+			<div id="horario" class="container" style="background-color:#F3F1F1;"> <!--  padding-left: 32px  -->
+            	<div id="titulo" class="h5 text-center text-danger">Mis Turnos</div>
+                	<div id="mostrar_turnos">
+   				
+   					</div>
 				<div class="row text-center my-3">
-                	<div class="col-12 col-lg-12">
-						<button type="submit" class="btn btn-block btn-success" onClick="">Buscar</button>
+                	<div class="col-3 col-lg-3" onClick="menosUno()">
+						<i class="fas fa-angle-double-left"></i>
+					</div>
+                	<div class="col-6 col-lg-6">
+						<button type="submit" class="btn btn-block btn-success" onClick="location.href='menu.html';">Men&uacute;</button>
+					</div>
+                	<div class="col-3 col-lg-3" onClick="masUno()">
+						<i class="fas fa-angle-double-right"></i>
 					</div>
 				</div>
-
-				<div class="row text-center my-3">
-                	<div class="col-12 col-lg-12">
-						<button type="submit" class="btn btn-block btn-success" onClick="">Volver</button>
-					</div>
-				</div>
-                   
-
-						</div>
+			</div> <!-- Container -->
 		</div> <!--  /d-flex -->
 
 	

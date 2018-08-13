@@ -14,10 +14,10 @@
 	<script type="text/javascript" src="scripts/salir.js"></script>
 	<script src="js/bootbox.min.js"></script>
 	<!-------------------------------->
-
-	<script type="text/javascript" src="scripts/entroBuscarTurno.js"></script>
-	<script type="text/javascript" src="scripts/seleccionarHora.js"></script>
-
+	<script type="text/javascript" src="scripts/entroReservarTurno.js"></script>
+	<script type="text/javascript" src="scripts/reservarTurnoConfirma.js"></script>
+	<script type="text/javascript" src="scripts/turnos_pdf.js"></script>
+	
 	<script defer src="scripts/fontawesome-all.js"></script>
     <title>GTS Pilar</title>
 
@@ -37,7 +37,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <link href="build/toastr.min.css" rel="stylesheet" type="text/css" /> -->
 	 </head>
-  <body onLoad="entroBuscarTurno()" class="bg-light fondo">
+  <body onLoad="entroReservarTurno()" class="bg-light fondo">
 
    <!-- Encabezado -->
     <div class="row">
@@ -51,15 +51,29 @@
     	<!-- ################################################### -->
 
 		<div class="d-flex p-3 my-3 box-shadow" > <!-- style="background-color:#ffc40075" -->
-			<div id="horario" class="container" style="background-color:#F3F1F1">
-            	<div id="titulo" class="h5 text-center text-danger">Selecione el horario</div>
-                <div id="mostrar_horarios" class="row text-center my-3">
-                
- 				</div>
-						
+			<div class="container" style="background-color:#F3F1F1">
+            	<div id="titulo" class="h5 text-center text-danger">Complete sus datos</div>
+                <div class="row text-left my-3" >
+                	<div class="col-12">Empresa</div>
+                	<div class="col-12"><input type="text" class="form-control" id="empresa" placeholder="Empresa"></div>
+                	<div class="col-12">E-mail empresa</div>
+                	<div class="col-12"><input type="text" class="form-control" id="email_empresa" placeholder="e-mail de la empresa"></div>
+                </div>
+                <div class="row text-left my-3" style="background-color: darkgray">
+                	<div class="col-12">Apellido y Nombre</div>
+                	<div class="col-12"><input type="text" class="form-control" id="nombre" placeholder="Apellido y Nombre"></div>
+                	<div class="col-12">E-mail</div>
+                	<div class="col-12"><input type="text" class="form-control" id="email" placeholder="e-mail"></div>
+                	<div class="col-12">Telefono</div>
+                	<div class="col-12"><input type="text" class="form-control" id="telefono" placeholder="Telefono"></div>
+	               	<div class="col-12">Patente 1</div>
+                	<div class="col-12"><input type="text" class="form-control" id="patente1" placeholder="Patente 1" onkeyup="javascript:this.value=this.value.toUpperCase();"></div>
+	               	<div class="col-12">Patente 2</div>
+                	<div class="col-12"><input type="text" class="form-control" id="patente2" placeholder="Patente 2" onkeyup="javascript:this.value=this.value.toUpperCase();"></div>
+ 				</div>						
 				<div class="row text-center my-3">
                 	<div class="col-12 col-lg-12">
-						<button type="submit" class="btn btn-block btn-success" onClick="">Reservar</button>
+						<button type="submit" class="btn btn-block btn-success" onClick="reservarTurnoConfirma()">Confirmar</button>
 					</div>
 				</div>
 
@@ -68,7 +82,9 @@
 						<button type="submit" class="btn btn-block btn-success" onClick="location.href='menu.html';">Volver</button>
 					</div>
 				</div>
-			</div> <!-- Container -->
+                   
+
+						</div>
 		</div> <!--  /d-flex -->
 
 	

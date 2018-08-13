@@ -1,8 +1,17 @@
 function validar_usuario(){
+	var swci_url  = getCookie('swci_url'); // http://localhost/gts/
 	var usuario = document.getElementById("usuario").value;
 	var clave = document.getElementById("password").value;
 	//var conectado = document.getElementById("conectado").value;
 	var conectado = document.getElementById("conectado").checked;
+	
+	if(usuario.indexOf('@') != -1)
+			{var programa = swci_url+"gts_turnos/validacion_chofer.php"}
+			else
+			{var programa = swci_url+"gts_turnos/validacion_empresa.php"}
+	
+	console.log('Programa = '+programa);
+
 	console.log('Conectado 01 = '+conectado);
 	var error = '';
 	if(usuario.length < 1){error = error+"<p>El campo <b>Usuario</b> es obligatorio</p>"};
@@ -33,6 +42,7 @@ function validar_usuario(){
   				if (xmlhttp.readyState==4 && xmlhttp.status==200)
    			 {
 				console.log('respuesta '+xmlhttp.responseText)
+				//array("estado"=>1,"principal"=>$principal,"saldo"=>$saldo,"nombre"=>"","email"=>"","nombre_empresa"=>$data_empresa->em_nombre,"em_mail_empresa"=>$data_empresa->em_mail,"em_telefono"=>$data_empresa->em_telefono);
 				var respuesta = JSON.parse(xmlhttp.responseText);
 				if(respuesta.estado==0){
 					bootbox.alert({
@@ -42,12 +52,16 @@ function validar_usuario(){
 					});
 					return;}
 					else
-					{setCookie('swci_user', json, 100);
+					{var json=JSON.stringify({"usuario":usuario,"clave":clave,"conectado":conectado,"id_usu":respuesta.id_usu,"nombre":respuesta.nombre,"email":respuesta.email,"nombre_empresa":respuesta.nombre_empresa,"em_mail_empresa":respuesta.em_mail_empresa,"em_telefono":respuesta.em_telefono,"usu_id":respuesta.usu_id});
+					 console.log("json = "+json)
+					 setCookie('swci_user', json, 1000);
+					 setCookie('swci_apynom', respuesta.nombre, 1000);
 					 location.href='menu.html'; }
     		  	}
      		}
 			//----------------------
-			xmlhttp.open("POST","http://localhost/gts/gts_turnos/validacion.php",true);
+			console.log('Programa = '+programa)
+			xmlhttp.open("POST",programa,true);
 			xmlhttp.setRequestHeader("Content-type","application/json;charset=UTF-8");
 			//xmlhttp.withCredentials = "true";
 			xmlhttp.send(json);

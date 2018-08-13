@@ -11,7 +11,13 @@
 	<script type="text/javascript" src="scripts/seleccionarVehiculo.js"></script>
 	<script type="text/javascript" src="scripts/buscarTurno.js"></script>
 	<script type="text/javascript" src="scripts/entroPedirTurno.js"></script>
-	<script type="text/javascript" src="scripts/templates.js"></script>
+	<!-- Poner en todos -->
+	<script type="text/javascript" src="scripts/validar_usuario.js"></script>
+	<script type="text/javascript" src="scripts/leerDocumento.js"></script>
+    <script type="text/javascript" src="scripts/Cookie_swci.js"></script>
+	<script type="text/javascript" src="scripts/salir.js"></script>
+	<script src="js/bootbox.min.js"></script>
+	<!-------------------------------->
 	
 
 	<script defer src="scripts/fontawesome-all.js"></script>
@@ -49,10 +55,10 @@
 			<div class="container">
             	<div class="h5 text-center text-danger">Seleccione tipo de veh&iacute;culo</div>
                 <div class="row text-center my-3">
-                	<div class="col-6" onClick="seleccionarVehiculo(1)">
+                	<div class="col-6" onClick="seleccionarVehiculo(2)">
                     	<img id="auto" class="img-responsive no_select" src="images/menu/auto_verde.png">
 					</div>
-                	<div class="col-6" onClick="seleccionarVehiculo(2)">
+                	<div class="col-6" onClick="seleccionarVehiculo(1)">
 						<img id="camion" class="img-responsive no_select" src="images/menu/camion_verde.png">
 					</div>
 				</div>
@@ -61,15 +67,15 @@
                 	<div class="col-6" onClick="seleccionar(1)">
                     	<img title="Gomeria" id="gomeria" class="img-responsive no_select" src="images/menu/cuadro_gomeria.png">
 					</div>
-                	<div class="col-6" onClick="seleccionar(2)">
+                	<div class="col-6" onClick="seleccionar(3)">
 						<img id="lavado" class="img-responsive no_select" src="images/menu/cuadro_lavado.png">
 					</div>
 				</div>
                 <div class="row text-center my-3">
-                	<div class="col-6" onClick="seleccionar(3)">
+                	<div class="col-6" onClick="seleccionar(5)">
                     	<img id="lubricentro" class="img-responsive no_select" src="images/menu/cuadro_lubricentro.png">
 					</div>
-                	<div class="col-6" onClick="seleccionar(4)">
+                	<div class="col-6" onClick="seleccionar(2)">
 						<img id="servicio" class="img-responsive no_select" src="images/menu/cuadro_servicio.png">
 					</div>
 				</div>
