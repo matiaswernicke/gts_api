@@ -1,6 +1,7 @@
 
 function leerLogin(){
-	setCookie('swci_url', 'http://localhost/gts/', 10000);
+	//setCookie('swci_url', 'http://localhost/gts/', 10000);
+	setCookie('swci_url', 'http://66.175.217.139/', 10000);
 	//setCookie('swci_url', 'http://66.175.217.139/', 100);
 	var swci_user = getCookie('swci_user');
 	var swci_url  = getCookie('swci_url');
